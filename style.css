@@ -1,0 +1,231 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+#main-container{
+    display: flex;
+    flex-flow:column wrap;
+    min-height: 100%;
+    
+}
+.main-container{
+    background: #F0F2F0;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #000C40, #F0F2F0);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #000C40, #F0F2F0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.main-container-dark-mode{
+    background:white;
+
+}
+.switch {
+    position: absolute;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    right: 10px;
+    
+  }
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border: 1px solid black;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+input:checked + .slider {
+    background-color: black;
+}
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+.slider.round {
+    border-radius: 34px;
+}
+.slider.round:before {
+    border-radius: 50%;
+}
+#title{
+    
+    margin: 20px;
+    
+}
+.title{
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+.title-dark-mode{
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+}
+.title img{
+    border: 2px solid black;
+}
+.title-dark-mode img{
+    border: 2px solid white;
+}
+#title img{
+   
+    width:225px;
+    height: 224px;
+    border-radius: 400px;
+    
+    
+} 
+#form-container{
+    width: 600px;
+    border: 1px solid black;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    margin-left: auto;
+    margin-right:auto;
+    border-radius: 20px;
+    min-height: 500px;
+    margin-top:auto;
+    margin-bottom:auto;
+}
+.form-container{
+    background-color: rgb(230, 230, 230);
+}
+.form-container-dark-mode{
+    background-color:black;
+}
+#friend-input{
+    width: 400px;
+    height: 30px;
+    border-radius: 40px;
+    padding: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    
+}
+.friend-input{
+    border: 1px solid black;
+    border-left: 20px solid black;
+    border-right: 20px solid black;
+    background-color: white;
+    color:black ;
+}
+.friend-input-dark-mode{
+    border: 1px solid whitesmoke;
+    border-left: 20px solid white;
+    border-right: 20px solid white;
+    background-color: black;
+    color:white;
+}
+.friend-input-dark-mode::placeholder{
+    color: white;
+    opacity: 1;
+}
+.friend-input::placeholder{
+    color:grey;
+    opacity:1;
+}
+.friend-names-container{
+    display: flex;
+    flex-flow: column wrap;
+    
+    align-items: center;
+}
+.friend-name{
+    width: 500px;
+    background-color:white;
+    margin-bottom: 10px;
+    border:1px solid black;
+    border-left: 4px solid blue;
+    height: 30px;
+    padding-top: 10px;
+    padding-left: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.btn-red-close{
+    background-color: red;
+    color: white;
+    font-weight: bolder;
+    font-size: 14px;
+    border-radius: 50%;
+    
+}
+.edit-btn-green{
+    background-color: #28a745;
+    color: white;
+    border-radius: 2px;
+    margin-right: 10px;
+    
+}
+
+.done-btn{
+    background-color: red;
+    color: white;
+    border-radius: 2px;
+    margin-right: 10px;
+    visibility: hidden;
+    
+}
+
+.friend-tools{
+ margin-right: 15px;   
+}
+.edit {
+    padding: 5px;
+    outline: none;
+    margin:0px;
+  }
+@media (max-width:768px){
+    #form-container{
+    width: 350px;
+    align-items: center;
+    
+    }
+    .title img{
+        width: 100px;
+        height: 100px;
+        text-align: center;
+    }
+    #friend-input{
+        width:170px
+    }
+    .add-box{
+        margin: 15px;
+    }
+    .friend-name{
+        width: 300px;
+    }
+    
+}
+
+@media (max-width:425px){
+    #friend-input{
+        width:100px
+    }
+    .main-container{
+        width: 50px;
+    }
+}
